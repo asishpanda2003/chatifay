@@ -167,7 +167,8 @@ function MessageArea() {
             <div onClick={() => image.current.click()}>
               <FaImages className="w-[25px] h-[25px] text-white cursor-pointer" />
             </div>
-            {input.length > 0 || backendImage != null && (
+            {(input.length > 0 ||
+              (backendImage !== null && input.length === 0)) && (
               <button>
                 <RiSendPlane2Fill className="w-[25px] h-[25px] text-white cursor-pointer" />
               </button>
